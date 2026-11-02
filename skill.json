@@ -1,0 +1,22 @@
+{
+  "name": "genpark-personal-agent-neuromuscular-reaction-time-psychomotor-skill",
+  "version": "1.0.0",
+  "description": "Calculates Psychomotor Vigilance Task (PVT) attentional lapses (>= 500ms), reciprocal speed (1/RT), false starts, and estimates cumulative sleep debt hours.",
+  "tools": [
+    {
+      "name": "evaluate_pvt_attentional_performance",
+      "description": "Calculates mean RT, median RT, reciprocal speed (1/RT), lapse count (>= 500ms), and alertness tier.",
+      "parameters": {
+        "reaction_times_json": "string (JSON array of reaction times in milliseconds)"
+      }
+    },
+    {
+      "name": "estimate_sleep_debt_from_pvt_lapses",
+      "description": "Estimates cumulative sleep debt hours and impairment tier from PVT lapses.",
+      "parameters": {
+        "lapse_count": "int (default 4)",
+        "reciprocal_speed": "float (default 3.3)"
+      }
+    }
+  ]
+}
